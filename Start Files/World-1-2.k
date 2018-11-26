@@ -22,7 +22,7 @@ function moveTwo(){
 
 function FillPotholes(){
 	fillPothole();
-	move2();
+	moveTwo();
 	fillPothole();
 	move();
 }
