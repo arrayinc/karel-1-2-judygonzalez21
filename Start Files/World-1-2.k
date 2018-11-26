@@ -7,12 +7,18 @@ import "turns";
 
 function fillPothole(){
 	move();
-	turnRight();
-	move();
-	putBeeper();
-	turnAround();
-	move();
-	turnRight();
+
+	if(rightIsClear()){
+		turnRight();
+		move();
+		
+		if(noBeepersPresent()){
+			putBeeper();	
+		}	
+		turnAround();
+		move();
+		turnRight();	
+	}	
 }
 
 function moveTwo(){
@@ -26,3 +32,4 @@ function FillPotholes(){
 	fillPothole();
 	move();
 }
+ 
